@@ -151,4 +151,3 @@ ingest:
                 xpath: "//pbcoreInstantiationDocument/instantiationExtension/extensionWrap[starts-with(@annotation, 'fixity check')]/extensionElement[.='eventDate']/following-sibling::extensionValue"
             transform:
               ToDate: from_yyyy-mm-dd
-
