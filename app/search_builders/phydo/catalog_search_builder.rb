@@ -5,6 +5,8 @@ module Phydo
       :apply_last_fixity_date_time_filter,
       :apply_barcode_filter,
       :apply_file_path_filter
+      :apply_filename_filter,
+      :apply_file_path_segment_filter
     ]
 
     def models
@@ -31,6 +33,22 @@ module Phydo
       if file_path_filter
         solr_params[:fq] ||= []
         solr_params[:fq] << file_path_filter
+      end
+      solr_params
+    end
+
+    def apply_filename_filter(solr_params)
+      if filename_filter
+        solr_params[:fq] ||= []
+        solr_params[:fq] << filename_filter
+      end
+      solr_params
+    end
+
+    def apply_file_path_segment_filter(solr_params)
+      if file_path_segment_filter
+        solr_params[:fq] ||= []
+        solr_params[:fq] << file_path_segment_filter
       end
       solr_params
     end
@@ -77,6 +95,20 @@ module Phydo
         @file_path_filter ||=
           unless blacklight_params['file_path'].blank?
             "file_path_sim:\"#{blacklight_params['file_path']}\""
+          end
+      end
+
+      def filename_filter
+        @filename_filter ||=
+          unless blacklight_params['filename'].blank?
+            "file_name_tesim:" + "\"#{blacklight_params['filename']}\""
+          end
+      end
+
+      def file_path_segment_filter
+        @file_path_segment_filter ||=
+          unless blacklight_params['file_path_segment'].blank?
+            'file_path_tesim:' + '"' + blacklight_params['file_path_segment'] + '"'
           end
       end
   end

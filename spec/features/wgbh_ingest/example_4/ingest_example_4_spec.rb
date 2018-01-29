@@ -15,7 +15,7 @@ RSpec.describe "WGBH ingest example 3 batch" do
     expect(FileSet.all.count).to eq @sip_paths.count
   end
 
-  it 'ingests a fixity check event with metadata', :clean_fedora, :large_ingest do
+  it 'can ingest a fixity check event from metadata', :clean_fedora, :large_ingest do
 
     FileSet.all.each do |file_set|
       # First grab the fixity check by selecting the one with PREMIS event type of 'fix'.
