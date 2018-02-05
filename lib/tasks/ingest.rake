@@ -9,12 +9,13 @@ namespace :phydo do
     end.flatten
     shared_sip_path = ENV['shared_sip_path']
     iterations = ENV['iterations']
+    depositor = ENV['depositor']
 
     if !config_file_path || (sip_paths.empty? && !shared_sip_path)
       abort "Error: Invalid Parameters\n\nUsage: rake hyrax:ingest config_file=FILE [sip_paths=PATH1[,PATH2,...]] [shared_sip_path=SHARED_PATH]\n\n"
     end
 
-    batch_runner = Hyrax::Ingest::BatchRunner.new(config_file_path: config_file_path, sip_paths: sip_paths, shared_sip_path: shared_sip_path, iterations: iterations)
+    batch_runner = Hyrax::Ingest::BatchRunner.new(config_file_path: config_file_path, sip_paths: sip_paths, shared_sip_path: shared_sip_path, iterations: iterations, depositor: depositor)
     batch_runner.run!
     ingested_file_set_ids = batch_runner.ingested_ids_by_type[FileSet]
     if ENV['compare_checksums'] && ingested_file_set_ids
