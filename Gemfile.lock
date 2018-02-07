@@ -126,8 +126,8 @@ GEM
       execjs
     awesome_nested_set (3.1.4)
       activerecord (>= 4.0.0, < 5.3)
-    aws-partitions (1.57.0)
-    aws-sdk-core (3.14.0)
+    aws-partitions (1.59.0)
+    aws-sdk-core (3.15.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
@@ -280,10 +280,10 @@ GEM
       nokogiri (>= 1.4.3)
     erubi (1.7.0)
     execjs (2.7.0)
-    factory_girl (4.9.0)
+    factory_bot (4.8.2)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.9.0)
-      factory_girl (~> 4.9.0)
+    factory_bot_rails (4.8.2)
+      factory_bot (~> 4.8.2)
       railties (>= 3.0.0)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
@@ -291,7 +291,7 @@ GEM
       faraday
     fcrepo_wrapper (0.9.0)
       ruby-progressbar
-    ffi (1.9.18)
+    ffi (1.9.21)
     flipflop (2.3.1)
       activesupport (>= 4.0)
     flot-rails (0.0.7)
@@ -907,7 +907,7 @@ DEPENDENCIES
   devise
   devise-guests (~> 0.5)
   external_storage!
-  factory_girl_rails (~> 4.0)
+  factory_bot_rails (~> 4.0)
   fcrepo_wrapper
   guard-rspec
   guard-rubocop
