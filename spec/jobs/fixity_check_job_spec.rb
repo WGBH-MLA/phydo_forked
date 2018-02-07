@@ -14,6 +14,7 @@ RSpec.describe FixityCheckJob do
 
   describe 'when running the fixity check job', :clean_fedora do
     before do
+      # TODO: Simplify creation of sample FileSets and Preservation::Events with FactoryBot
       file_set_attrs.each do |fsa|
         FileSet.new.tap do |fs|
           fs.id = fsa[:id]
