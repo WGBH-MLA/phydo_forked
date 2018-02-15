@@ -27,4 +27,4 @@ ingest:
           # PREMIS event date time is the current time
           - rdf_predicate: "http://www.loc.gov/premis/rdf/v1#hasEventDateTime"
             from:
-              DateTime: now
+              DateTime: {}
