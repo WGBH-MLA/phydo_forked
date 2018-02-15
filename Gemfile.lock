@@ -1,28 +1,4 @@
 GIT
-  remote: git://github.com/IUBLibTech/hyrax-ingest.git
-  revision: 2406f120bc8f53b48103fc7eac63d287893d2427
-  branch: master
-  specs:
-    hyrax-ingest (0.1.0)
-      functional_hash (~> 0.2.1)
-      hyrax (~> 1.0.3)
-      hyrax-preservation
-      interloper (~> 0.2.3)
-      minitar
-      nokogiri
-      rails (~> 5)
-      roo (~> 2.7.0)
-
-GIT
-  remote: git://github.com/IUBLibTech/hyrax-preservation.git
-  revision: 390dfb69a7cc46e5ea85f49e95057e9fceb12d03
-  branch: master
-  specs:
-    hyrax-preservation (0.1.0)
-      hyrax (~> 1.0.4)
-      jquery-ui-rails (~> 5.0.5)
-
-GIT
   remote: git://github.com/projectblacklight/blacklight_range_limit.git
   revision: 333631ccb73c81164b58116f63e53c8ed57134e2
   branch: master
@@ -435,6 +411,18 @@ GEM
       signet
       tinymce-rails (~> 4.1)
       tinymce-rails-imageupload (~> 4.0.17.beta)
+    hyrax-ingest (0.1.0)
+      functional_hash (~> 0.2.1)
+      hyrax (~> 1.0, >= 1.0.3)
+      hyrax-preservation (~> 0.1)
+      interloper (~> 0.2.3)
+      minitar (~> 0.6.1)
+      nokogiri (~> 1.8, >= 1.8.2)
+      rails (~> 5)
+      roo (~> 2.7, >= 2.7.0)
+    hyrax-preservation (0.1.1)
+      hyrax (~> 1.0, >= 1.0.4)
+      jquery-ui-rails (~> 5.0, >= 5.0.5)
     i18n (0.9.3)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
@@ -912,8 +900,8 @@ DEPENDENCIES
   guard-rspec
   guard-rubocop
   hyrax (~> 1.0.5)
-  hyrax-ingest!
-  hyrax-preservation!
+  hyrax-ingest (~> 0.1)
+  hyrax-preservation (~> 0.1)
   jbuilder (~> 2.5)
   jquery-rails
   launchy
