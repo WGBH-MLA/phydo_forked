@@ -1,3 +1,9 @@
+# THIS REPOSITORY HAS MOVED
+
+**New location: [WGBH-MLA/phydo](https://github.com/WGBH-MLA/phydo)**
+
+This repository started as a fork of [IUBLibTech/phydo](https://github.com/IUBLibTech/phydo), but due to divergent concerns, we decided to detach it for easier maintenance.
+
 [![Build Status](https://travis-ci.org/IUBLibTech/phydo.svg?branch=master)](https://travis-ci.org/IUBLibTech/phydo)
 [![Coverage Status](https://coveralls.io/repos/github/IUBLibTech/phydo/badge.svg?branch=master)](https://coveralls.io/github/IUBLibTech/phydo?branch=master)
 
